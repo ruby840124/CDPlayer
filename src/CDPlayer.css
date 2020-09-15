@@ -1,0 +1,454 @@
+.main {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 750px;
+    background: white;
+    border: 2px solid rgba(0,0,0);
+}
+
+.player:after, .player:before {
+    border-radius: 4px;
+    border: 2.5px solid #000;
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #c5c5c5;
+}
+
+.player:before {
+    right: -25px;
+    top: -4px;
+    width: 20px;
+    height: 750px;
+    transform: skewY(45deg);
+    transform-origin: top left;
+}
+
+.player:after {
+    left: -4px;
+    bottom: -25px;
+    width: 750px;
+    height: 20px;
+    transform: skewX(45deg);
+    transform-origin: top left;
+}
+
+.playerTopBlock {
+    width: 750px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerBottomBlock{
+    width: 750px;
+    height: 250px;
+}
+
+.adjustBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 750px;
+    height: 150px;
+    background-color: gray;
+}
+.musicInfo {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.playerComponent {
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 420px;
+    animation: playAnimation 2s linear;
+    animation-fill-mode: forwards;
+    transform: rotate(-15deg);
+    transform-origin: 80% 85%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    z-index: 10;
+}
+
+.playButton {
+    animation: none;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    z-index: 20;
+}
+
+.adjustBar {
+    width: 750px;
+    height: 100px;
+    background-color: turquoise;
+}
+
+.buttons {
+    width: 60px;
+    height: 500px;
+    margin-top: 30px;
+    margin-right: 30px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nextButton {
+    transform: scaleX(-1);
+    background-image: url('./assets/next.svg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    text-align: center;
+    transform-style: preserve-3d;
+    background-color: white;
+    border: 3px solid #000;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.nextButton:after {
+    transform: translateX(-9px) translateZ(-10px);
+    border-radius: 50px;
+    border: 3px solid #000;
+    content: '';
+    display: block;
+    background-color: #c5c5c5;
+    width: 50px;
+    height: 50px;
+    transform-origin: top left;
+}
+
+.nextButton:active {
+    transform: scaleX(-1) translate(-5px, 2px);
+}
+
+.nextButton:active:after {
+    visibility: hidden;
+}
+
+.lastButton {
+    background-image: url('./assets/next.svg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    text-align: center;
+    transform-style: preserve-3d;
+    background-color: white;
+    border: 3px solid #000;
+    border-radius: 50px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.lastButton:after {
+    transform: translateX(3px) translateZ(-10px);
+    border-radius: 50px;
+    border: 3px solid #000;
+    content: '';
+    display: block;
+    background-color: #c5c5c5;
+    width: 50px;
+    height: 50px;
+    transform-origin: top left;
+}
+
+.lastButton:active {
+    transform: translate(3px, 2px);
+}
+
+.lastButton:active:after {
+    visibility: hidden;
+}
+
+.cycleButton {
+    margin-bottom: 20px;
+    background-image: url('./assets/cycle.svg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    text-align: center;
+    transform-style: preserve-3d;
+    background-color: white;
+    border: 3px solid #000;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.cycleButton:after {
+    transform: translateX(3px) translateZ(-1px);
+    border-radius: 50px;
+    border: 3px solid #000;
+    content: '';
+    display: block;
+    background-color: #c5c5c5;
+    width: 50px;
+    height: 50px;
+    transform-origin: top left;
+}
+
+.cycleButton:active {
+    transform: translate(3px, 2px);
+}
+
+.cycleButton:active:after {
+    visibility: hidden;
+}
+
+.CD {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+    border-radius: 100%;
+    border: 3px solid #000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('https://www.101media.com.tw/img/2016/05/06/1605977011udfck.jpg');
+    animation: CDanimation infinite 10s linear;
+}
+
+.CDCenter {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 3px solid #000;
+}
+
+  @keyframes CDanimation {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+  }
+
+  @keyframes playAnimation {
+    0% {
+        transform: rotate(-15deg);
+      }
+    50% {
+        transform: rotate(0deg);
+      }
+    100% {
+        transform: rotate(15deg);
+    }
+  }
+
+  @keyframes stopAnimation {
+    0% {
+        transform: rotate(15deg);
+      }
+    50% {
+        transform: rotate(0deg);
+      }
+    100% {
+        transform: rotate(-15deg);
+    }
+  }
+
+@media only screen and (max-width: 700px) {
+    .playerTopBlock {
+        
+        width: 750px;
+        height: 100px;
+    }
+
+    .CD {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        border: 2px solid #000;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('https://www.101media.com.tw/img/2016/05/06/1605977011udfck.jpg');
+    }
+    
+    .CDCenter {
+        background-color: white;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        border: 2px solid #000;
+    }
+
+    .adjustBlock {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 250px;
+        height: 30px;
+        background-color: gray;
+    }
+
+    .playerBottomBlock{
+        width: 250px;
+        height: 30px;
+    }
+
+    .player {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        background: white;
+        border: 2px solid rgba(0,0,0);
+    }
+    
+    .player:after, .player:before {
+        border-radius: 4px;
+        border: 3px solid #000;
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: #c5c5c5;
+    }
+    
+    .player:before {
+        right: -16px;
+        top: -3px;
+        width: 10px;
+        height: 250px;
+        transform: skewY(45deg);
+        transform-origin: top left;
+    }
+    
+    .player:after {
+        left: -4px;
+        bottom: -16px;
+        width: 250px;
+        height: 10px;
+        transform: skewX(45deg);
+        transform-origin: top left;
+    }
+
+
+    .buttons {
+        width: 50px;
+        height: 150px;
+        margin-right: 2px;
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nextButton {
+        transform: scaleX(-1);
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        text-align: center;
+        transform-style: preserve-3d;
+        background-color: white;
+        border: 2px solid #000;
+        border-radius: 20px;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .nextButton:after {
+        transform: translateX(-5px) translateZ(-10px);
+        border-radius: 20px;
+        border: 2px solid #000;
+        content: '';
+        display: block;
+        background-color: #c5c5c5;
+        width: 20px;
+        height: 20px;
+        transform-origin: top left;
+    }
+    
+    .lastButton {
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        text-align: center;
+        transform-style: preserve-3d;
+        background-color: white;
+        border: 2px solid #000;
+        border-radius: 20px;
+        margin-top: 5px;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .lastButton:after {
+        transform: translateX(1px) translateZ(-10px);
+        border-radius: 20px;
+        border: 2px solid #000;
+        content: '';
+        display: block;
+        background-color: #c5c5c5;
+        width: 20px;
+        height: 20px;
+        transform-origin: top left;
+    }
+    
+    .cycleButton {
+        margin-bottom: 20px;
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: 70%;
+        text-align: center;
+        transform-style: preserve-3d;
+        background-color: white;
+        border: 2px solid #000;
+        border-radius: 20px;
+        margin-bottom: 5px;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .cycleButton:after {
+        transform: translateX(1px) translateZ(-10px);
+        border-radius: 20px;
+        border: 2px solid #000;
+        content: '';
+        display: block;
+        background-color: #c5c5c5;
+        width: 20px;
+        height: 20px;
+        transform-origin: top left;
+    }
+
+  }
