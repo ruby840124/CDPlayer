@@ -1,27 +1,30 @@
 {
   "files": {
-    "main.css": "/CD_player/static/css/main.7b665b0c.chunk.css",
-    "main.js": "/CD_player/static/js/main.0937887c.chunk.js",
-    "main.js.map": "/CD_player/static/js/main.0937887c.chunk.js.map",
+    "main.css": "/CD_player/static/css/main.3eee4142.chunk.css",
+    "main.js": "/CD_player/static/js/main.9fb8f839.chunk.js",
+    "main.js.map": "/CD_player/static/js/main.9fb8f839.chunk.js.map",
     "runtime-main.js": "/CD_player/static/js/runtime-main.7cf77248.js",
     "runtime-main.js.map": "/CD_player/static/js/runtime-main.7cf77248.js.map",
-    "static/js/2.c3840275.chunk.js": "/CD_player/static/js/2.c3840275.chunk.js",
-    "static/js/2.c3840275.chunk.js.map": "/CD_player/static/js/2.c3840275.chunk.js.map",
+    "static/js/2.cbe9779c.chunk.js": "/CD_player/static/js/2.cbe9779c.chunk.js",
+    "static/js/2.cbe9779c.chunk.js.map": "/CD_player/static/js/2.cbe9779c.chunk.js.map",
     "index.html": "/CD_player/index.html",
-    "precache-manifest.bba04d985972cd59c7cf9c842d7cdda2.js": "/CD_player/precache-manifest.bba04d985972cd59c7cf9c842d7cdda2.js",
+    "precache-manifest.2fc5c702430bee108fd59c4d401b0e15.js": "/CD_player/precache-manifest.2fc5c702430bee108fd59c4d401b0e15.js",
     "service-worker.js": "/CD_player/service-worker.js",
-    "static/css/main.7b665b0c.chunk.css.map": "/CD_player/static/css/main.7b665b0c.chunk.css.map",
-    "static/js/2.c3840275.chunk.js.LICENSE.txt": "/CD_player/static/js/2.c3840275.chunk.js.LICENSE.txt",
-    "static/media/CDPlayer.css": "/CD_player/static/media/next.b41b6646.svg",
+    "static/css/main.3eee4142.chunk.css.map": "/CD_player/static/css/main.3eee4142.chunk.css.map",
+    "static/js/2.cbe9779c.chunk.js.LICENSE.txt": "/CD_player/static/js/2.cbe9779c.chunk.js.LICENSE.txt",
+    "static/media/CDPlayer.css": "/CD_player/static/media/player.35d7ffce.svg",
+    "static/media/line.svg": "/CD_player/static/media/line.1482722a.svg",
+    "static/media/line2.svg": "/CD_player/static/media/line2.31778624.svg",
+    "static/media/line3.svg": "/CD_player/static/media/line3.f311fb90.svg",
     "static/media/music.mp3": "/CD_player/static/media/music.cc723b56.mp3",
     "static/media/play.svg": "/CD_player/static/media/play.c363353e.svg",
-    "static/media/player.svg": "/CD_player/static/media/player.35d7ffce.svg",
+    "static/media/sound.svg": "/CD_player/static/media/sound.d3cc93dd.svg",
     "static/media/stop.svg": "/CD_player/static/media/stop.a54fda48.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.7cf77248.js",
-    "static/js/2.c3840275.chunk.js",
-    "static/css/main.7b665b0c.chunk.css",
-    "static/js/main.0937887c.chunk.js"
+    "static/js/2.cbe9779c.chunk.js",
+    "static/css/main.3eee4142.chunk.css",
+    "static/js/main.9fb8f839.chunk.js"
   ]
 }
