@@ -17,12 +17,13 @@
     width: 750px;
     height: 750px;
     background: white;
-    border: 2px solid rgba(0,0,0);
+    border-radius: 4px;
+    border: 3px solid rgba(0,0,0);
 }
 
 .player:after, .player:before {
     border-radius: 4px;
-    border: 2.5px solid #000;
+    border: 3px solid #000;
     content: '';
     position: absolute;
     display: block;
@@ -45,65 +46,6 @@
     height: 20px;
     transform: skewX(45deg);
     transform-origin: top left;
-}
-
-.playerTopBlock {
-    width: 750px;
-    height: 500px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.playerBottomBlock{
-    width: 750px;
-    height: 250px;
-}
-
-.adjustBlock {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 750px;
-    height: 150px;
-    background-color: gray;
-}
-.musicInfo {
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.playerComponent {
-    background-repeat: no-repeat;
-    width: 300px;
-    height: 420px;
-    animation: playAnimation 2s linear;
-    animation-fill-mode: forwards;
-    transform: rotate(-15deg);
-    transform-origin: 80% 85%;
-    position: absolute;
-    top: 30%;
-    left: 20%;
-    z-index: 10;
-}
-
-.playButton {
-    animation: none;
-    width: 45px;
-    height: 45px;
-    position: absolute;
-    top: 30%;
-    left: 20%;
-    z-index: 20;
-}
-
-.adjustBar {
-    width: 750px;
-    height: 100px;
-    background-color: turquoise;
 }
 
 .buttons {
@@ -190,7 +132,7 @@
 }
 
 .cycleButton {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-image: url('./assets/cycle.svg');
     background-position:center;
     background-repeat: no-repeat;
@@ -216,20 +158,19 @@
     transform-origin: top left;
 }
 
-.cycleButton:active {
-    transform: translate(3px, 2px);
-}
-
-.cycleButton:active:after {
-    visibility: hidden;
+.cycleBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .CD {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 450px;
-    height: 450px;
+    width: 520px;
+    height: 520px;
     border-radius: 100%;
     border: 3px solid #000;
     background-position: center;
@@ -239,6 +180,17 @@
     animation: CDanimation infinite 10s linear;
 }
 
+.rightLine{
+    width: 35px;
+    animation: lineAnimation infinite 2s linear
+}
+
+.leftLine{
+    margin-left: 10px;
+    width: 10px;
+    animation: leftLineAnimation infinite 2s linear
+}
+
 .CDCenter {
     background-color: white;
     width: 40px;
@@ -246,6 +198,142 @@
     border-radius: 100%;
     border: 3px solid #000;
 }
+
+.CDBlock {
+    width: 750px;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlBlock{
+    width: 750px;
+    height: 200px;
+}
+
+.controlVoiceBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 750px;
+    height: 120px;
+}
+.musicInfo {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.playerComponent {
+    transform-style: preserve-3d;
+    background-image: url('./assets/player.svg');
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 420px;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    transform: rotate(-20deg);
+    transform-origin: 80% 85%;
+    position: absolute;
+    top: 32%;
+    left: 20%;
+    z-index: 2;
+}
+
+.playerComponent:after {
+    transform: translateX(200px) translateY(322px) translateZ(-30px);
+    border-radius: 100%;
+    border: 3px solid #000;
+    content: '';
+    display: block;
+    background-color: #c5c5c5;
+    width: 85px;
+    height: 85px;
+    transform-origin: top left;
+}
+
+.playButton {
+    transform: translateX(30px) translateY(-50px);
+    position: absolute;
+    border-radius: 100%;
+    width: 78px;
+    height: 78px;
+    z-index: 3;
+}
+
+.playButtonImg {
+    transform: translateX(16px) translateY(12px);
+    width: 50px; 
+    height: 50px;
+}
+
+.controlmusicBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 80px;
+}
+
+.controlSound {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 20px;
+    border: 3px solid black;
+    background: white;
+    width: 160px;
+    height: 3px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 3px solid black;
+    appearance: none;
+    width: 18px;
+    height: 30px;
+    background: white;
+    cursor: pointer;
+  }
+
+  .slider:hover {
+    background-color: #d3d3d3;
+  }
+
+  .musicSlider {
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 20px;
+    border: 3px solid black;
+    background: white;
+    width: 600px;
+    height: 3px;
+  }
+
+  .musicSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 3px solid black;
+    appearance: none;
+    width: 18px;
+    height: 30px;
+    background: white;
+    cursor: pointer;
+  }
+
+  .musicSlider:hover {
+    background-color: #d3d3d3;
+  }
 
   @keyframes CDanimation {
     from {
@@ -258,7 +346,7 @@
 
   @keyframes playAnimation {
     0% {
-        transform: rotate(-15deg);
+        transform: rotate(-20deg);
       }
     50% {
         transform: rotate(0deg);
@@ -276,179 +364,35 @@
         transform: rotate(0deg);
       }
     100% {
-        transform: rotate(-15deg);
+        transform: rotate(-20deg);
     }
   }
 
+  @keyframes lineAnimation {
+    0% {
+        transform: translateX(15px) translateY(-110px) rotate(5deg);
+      }
+    50% {
+        transform: translateX(20px) translateY(-105px) rotate(5deg);
+      }
+    100% {
+        transform: translateX(15px) translateY(-110px) rotate(5deg);
+      }
+  }
+
+  @keyframes leftLineAnimation {
+    0% {
+        transform: translateX(5px) translateY(10px) ;
+      }
+    50% {
+        transform: translateX(0px) translateY(0px) ;
+      }
+    100% {
+        transform: translateX(5px) translateY(10px) ;
+      }
+  }
+
 @media only screen and (max-width: 700px) {
-    .playerTopBlock {
-        
-        width: 750px;
-        height: 100px;
-    }
 
-    .CD {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 120px;
-        height: 120px;
-        border-radius: 100%;
-        border: 2px solid #000;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url('https://www.101media.com.tw/img/2016/05/06/1605977011udfck.jpg');
-    }
-    
-    .CDCenter {
-        background-color: white;
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        border: 2px solid #000;
-    }
-
-    .adjustBlock {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 250px;
-        height: 30px;
-        background-color: gray;
-    }
-
-    .playerBottomBlock{
-        width: 250px;
-        height: 30px;
-    }
-
-    .player {
-        position: relative;
-        width: 250px;
-        height: 250px;
-        background: white;
-        border: 2px solid rgba(0,0,0);
-    }
-    
-    .player:after, .player:before {
-        border-radius: 4px;
-        border: 3px solid #000;
-        content: '';
-        position: absolute;
-        display: block;
-        background-color: #c5c5c5;
-    }
-    
-    .player:before {
-        right: -16px;
-        top: -3px;
-        width: 10px;
-        height: 250px;
-        transform: skewY(45deg);
-        transform-origin: top left;
-    }
-    
-    .player:after {
-        left: -4px;
-        bottom: -16px;
-        width: 250px;
-        height: 10px;
-        transform: skewX(45deg);
-        transform-origin: top left;
-    }
-
-
-    .buttons {
-        width: 50px;
-        height: 150px;
-        margin-right: 2px;
-        position: absolute;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .nextButton {
-        transform: scaleX(-1);
-        background-position:center;
-        background-repeat: no-repeat;
-        background-size: 50%;
-        text-align: center;
-        transform-style: preserve-3d;
-        background-color: white;
-        border: 2px solid #000;
-        border-radius: 20px;
-        width: 20px;
-        height: 20px;
-    }
-    
-    .nextButton:after {
-        transform: translateX(-5px) translateZ(-10px);
-        border-radius: 20px;
-        border: 2px solid #000;
-        content: '';
-        display: block;
-        background-color: #c5c5c5;
-        width: 20px;
-        height: 20px;
-        transform-origin: top left;
-    }
-    
-    .lastButton {
-        background-position:center;
-        background-repeat: no-repeat;
-        background-size: 50%;
-        text-align: center;
-        transform-style: preserve-3d;
-        background-color: white;
-        border: 2px solid #000;
-        border-radius: 20px;
-        margin-top: 5px;
-        width: 20px;
-        height: 20px;
-    }
-    
-    .lastButton:after {
-        transform: translateX(1px) translateZ(-10px);
-        border-radius: 20px;
-        border: 2px solid #000;
-        content: '';
-        display: block;
-        background-color: #c5c5c5;
-        width: 20px;
-        height: 20px;
-        transform-origin: top left;
-    }
-    
-    .cycleButton {
-        margin-bottom: 20px;
-        background-position:center;
-        background-repeat: no-repeat;
-        background-size: 70%;
-        text-align: center;
-        transform-style: preserve-3d;
-        background-color: white;
-        border: 2px solid #000;
-        border-radius: 20px;
-        margin-bottom: 5px;
-        width: 20px;
-        height: 20px;
-    }
-    
-    .cycleButton:after {
-        transform: translateX(1px) translateZ(-10px);
-        border-radius: 20px;
-        border: 2px solid #000;
-        content: '';
-        display: block;
-        background-color: #c5c5c5;
-        width: 20px;
-        height: 20px;
-        transform-origin: top left;
-    }
 
   }

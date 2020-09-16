@@ -17,7 +17,7 @@ class App extends React.Component{
   render() {
     return (
       <div className='App'>
-        <CDPlayer mp3= {mp3} musicName= {'Summertime'} author= {'周杰倫'}/>
+        <CDPlayer mp3= {mp3} musicName= {'黑色幽默'} author= {'周杰倫'}/>
       </div>
     );
   }
