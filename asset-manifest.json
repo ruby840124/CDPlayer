@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CD_player/static/css/main.a30cd299.chunk.css",
+    "main.css": "/CD_player/static/css/main.8eef25f1.chunk.css",
     "main.js": "/CD_player/static/js/main.04e2b9f2.chunk.js",
     "main.js.map": "/CD_player/static/js/main.04e2b9f2.chunk.js.map",
     "runtime-main.js": "/CD_player/static/js/runtime-main.7cf77248.js",
@@ -8,9 +8,9 @@
     "static/js/2.04fed778.chunk.js": "/CD_player/static/js/2.04fed778.chunk.js",
     "static/js/2.04fed778.chunk.js.map": "/CD_player/static/js/2.04fed778.chunk.js.map",
     "index.html": "/CD_player/index.html",
-    "precache-manifest.b0df8fa224b2195aa694190307eb4829.js": "/CD_player/precache-manifest.b0df8fa224b2195aa694190307eb4829.js",
+    "precache-manifest.fedcab4218140b8d615b5056c427101b.js": "/CD_player/precache-manifest.fedcab4218140b8d615b5056c427101b.js",
     "service-worker.js": "/CD_player/service-worker.js",
-    "static/css/main.a30cd299.chunk.css.map": "/CD_player/static/css/main.a30cd299.chunk.css.map",
+    "static/css/main.8eef25f1.chunk.css.map": "/CD_player/static/css/main.8eef25f1.chunk.css.map",
     "static/js/2.04fed778.chunk.js.LICENSE.txt": "/CD_player/static/js/2.04fed778.chunk.js.LICENSE.txt",
     "static/media/cover_.jpg": "/CD_player/static/media/cover_.004446f3.jpg",
     "static/media/CDPlayer.css": "/CD_player/static/media/player.35d7ffce.svg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.7cf77248.js",
     "static/js/2.04fed778.chunk.js",
-    "static/css/main.a30cd299.chunk.css",
+    "static/css/main.8eef25f1.chunk.css",
     "static/js/main.04e2b9f2.chunk.js"
   ]
 }
