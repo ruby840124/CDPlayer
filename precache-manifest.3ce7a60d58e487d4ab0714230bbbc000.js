@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c0480d0dd62c1694be6f43c2c8b72536",
+    "revision": "f6c5dc82718c1ff70f4bfdb76265d399",
     "url": "/CD_player/index.html"
   },
   {
-    "revision": "d4d003076b2aa2b55894",
-    "url": "/CD_player/static/css/main.2587823a.chunk.css"
+    "revision": "63412b24fe172036f4d0",
+    "url": "/CD_player/static/css/main.c52b4539.chunk.css"
   },
   {
     "revision": "ff9b67d297098c9e29db",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CD_player/static/js/2.cbe9779c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d4d003076b2aa2b55894",
-    "url": "/CD_player/static/js/main.acb67391.chunk.js"
+    "revision": "63412b24fe172036f4d0",
+    "url": "/CD_player/static/js/main.b0b10129.chunk.js"
   },
   {
     "revision": "b2a32f40121c5e60f505",
@@ -40,10 +40,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CD_player/static/media/line3.f311fb90.svg"
   },
   {
-    "revision": "cc723b562b31a43b1c44ee41a5a6593d",
-    "url": "/CD_player/static/media/music.cc723b56.mp3"
-  },
-  {
     "revision": "b41b66460b4a609952eb55366dbbd789",
     "url": "/CD_player/static/media/next.b41b6646.svg"
   },
@@ -62,5 +58,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a54fda4834f4579962ab2f6a160a49ad",
     "url": "/CD_player/static/media/stop.a54fda48.svg"
+  },
+  {
+    "revision": "1c965186d61b65019644a442b8684af6",
+    "url": "/CD_player/static/media/taste.1c965186.mp3"
   }
 ]);

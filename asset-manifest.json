@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/CD_player/static/css/main.2587823a.chunk.css",
-    "main.js": "/CD_player/static/js/main.acb67391.chunk.js",
-    "main.js.map": "/CD_player/static/js/main.acb67391.chunk.js.map",
+    "main.css": "/CD_player/static/css/main.c52b4539.chunk.css",
+    "main.js": "/CD_player/static/js/main.b0b10129.chunk.js",
+    "main.js.map": "/CD_player/static/js/main.b0b10129.chunk.js.map",
     "runtime-main.js": "/CD_player/static/js/runtime-main.7cf77248.js",
     "runtime-main.js.map": "/CD_player/static/js/runtime-main.7cf77248.js.map",
     "static/js/2.cbe9779c.chunk.js": "/CD_player/static/js/2.cbe9779c.chunk.js",
     "static/js/2.cbe9779c.chunk.js.map": "/CD_player/static/js/2.cbe9779c.chunk.js.map",
     "index.html": "/CD_player/index.html",
-    "precache-manifest.90e522b42553dd813d9d151ae4e7324a.js": "/CD_player/precache-manifest.90e522b42553dd813d9d151ae4e7324a.js",
+    "precache-manifest.3ce7a60d58e487d4ab0714230bbbc000.js": "/CD_player/precache-manifest.3ce7a60d58e487d4ab0714230bbbc000.js",
     "service-worker.js": "/CD_player/service-worker.js",
-    "static/css/main.2587823a.chunk.css.map": "/CD_player/static/css/main.2587823a.chunk.css.map",
+    "static/css/main.c52b4539.chunk.css.map": "/CD_player/static/css/main.c52b4539.chunk.css.map",
     "static/js/2.cbe9779c.chunk.js.LICENSE.txt": "/CD_player/static/js/2.cbe9779c.chunk.js.LICENSE.txt",
     "static/media/CDPlayer.css": "/CD_player/static/media/player.35d7ffce.svg",
     "static/media/line.svg": "/CD_player/static/media/line.1482722a.svg",
     "static/media/line2.svg": "/CD_player/static/media/line2.31778624.svg",
     "static/media/line3.svg": "/CD_player/static/media/line3.f311fb90.svg",
-    "static/media/music.mp3": "/CD_player/static/media/music.cc723b56.mp3",
     "static/media/play.svg": "/CD_player/static/media/play.c363353e.svg",
     "static/media/sound.svg": "/CD_player/static/media/sound.d3cc93dd.svg",
-    "static/media/stop.svg": "/CD_player/static/media/stop.a54fda48.svg"
+    "static/media/stop.svg": "/CD_player/static/media/stop.a54fda48.svg",
+    "static/media/taste.mp3": "/CD_player/static/media/taste.1c965186.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.7cf77248.js",
     "static/js/2.cbe9779c.chunk.js",
-    "static/css/main.2587823a.chunk.css",
-    "static/js/main.acb67391.chunk.js"
+    "static/css/main.c52b4539.chunk.css",
+    "static/js/main.b0b10129.chunk.js"
   ]
 }
