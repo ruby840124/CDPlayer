@@ -1,5 +1,5 @@
 import React from 'react';
-import mp3 from './assets/taste.mp3';
+import taste from './assets/taste.mp3';
 import cover from './assets/cover_.jpg';
 import CDPlayer from './CDPlayer';
 import './App.css';
@@ -8,6 +8,7 @@ const initialState = {
   hiddenList: false,
   init: true,
 };
+
 
 class App extends React.Component{
   constructor(props) {
@@ -78,11 +79,11 @@ class App extends React.Component{
               <div>list</div>
             </div>
             <div className = 'cover'>
-              <div className='coverImg' style={{backgroundImage: 'url(' + require('./assets/cover_.jpg') + ')'}}></div>
+              <div className='coverImg' style={{backgroundImage: 'url(' + require('./assets/cover_2.jpg') + ')'}}></div>
             </div>
           </div>
         </div>
-        <CDPlayer mp3 = {mp3} musicName = {'immaculate taste'} author = {'engelwood'} hidden = {hiddenList} hiddenInit = {init}/>
+        <CDPlayer mp3 = {taste} musicName = {'immaculate taste'} author = {'engelwood'} hidden = {hiddenList} hiddenInit = {init}/>
       </div>
     );
   }

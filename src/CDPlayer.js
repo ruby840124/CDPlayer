@@ -6,6 +6,10 @@ import pause from './assets/stop.svg';
 import rightLine from './assets/line.svg';
 import leftLine from './assets/line3.svg';
 import left2Line from './assets/line2.svg';
+import taste from './assets/taste.mp3';
+import angel from './assets/angel.mp3';
+import tasteCover from './assets/music_taste.jpg';
+import angelCover from './assets/music_angel.jpg';
 
 const initialState = {
   voice: 50, //mp3的聲音大小
@@ -16,8 +20,14 @@ const initialState = {
   durationText: null, //mp3的總時間
   currentTimeText: '00:00',
   duration: 0,
-  currentTime: 0
+  currentTime: 0,
+  index: 0,
 };
+
+const music = [taste, angel];
+const musicTitle = ['immaculate taste' , 'Angel With A Shotgun'];
+const musicAuthor = ['engelwood', 'The Cab'];
+const musicCover = [tasteCover, angelCover];
 
 class CDPlayer extends React.Component{
   constructor(props) {
@@ -26,7 +36,7 @@ class CDPlayer extends React.Component{
   }
 
   componentDidMount() {
-    this.addAudioComponent();
+    this.addAudioComponent(music[0]);
   }
 
   componentWillUnmount() {
@@ -35,22 +45,56 @@ class CDPlayer extends React.Component{
   }
 
   //加入音訊
-  addAudioComponent = () => {
-    const {mp3} = this.props;
+  addAudioComponent = (firstMusic) => {
+    const {index} =this.state;
     const audio = document.createElement("audio");
-    audio.src = mp3;
+    audio.src = firstMusic;
     audio.preload='metadata';
     audio.volume = 0.5; //初始音量
     audio.onloadedmetadata = () => {
       const duration = Math.floor(audio.duration)
 			this.setState({durationText: this.msToTime(duration), duration: duration});
     };
+    audio.onended = () => {
+      const {cycleState} = this.state;
+      if(!cycleState){
+        if(index + 1 < music.length){
+          this.updateAudioComponent(music[index+1]);
+          this.setState({index: index + 1});
+        }else{
+          this.updateAudioComponent(music[0]);
+          this.setState({index: 0});
+        }
+      }else {
+        this.updateAudioComponent(music[index]);
+      }
+    }
     this.currentTimeInterval = setInterval( () => {
       const currentTime = this.msToTime(Math.floor(audio.currentTime));
       this.setState({currentTimeText: currentTime, currentTime: audio.currentTime});
     }, 500);
     this.setState({audio: audio});
   }
+
+    //加入音訊
+    updateAudioComponent = (newMusic) => {
+      const {audio, playState} =this.state;
+      if(playState){
+        audio.pause();
+        audio.src = newMusic;
+        audio.volume = 0.5; //初始音量
+        audio.currentTime = 0; //初始音量
+        audio.load();
+        audio.play();
+        this.setState({currentTimeText: '00:00', currentTime: 0});
+      }else {
+        audio.src = newMusic;
+        audio.volume = 0.5; //初始音量
+        audio.currentTime = 0; //初始音量
+        audio.load();
+        this.setState({currentTimeText: '00:00', currentTime: 0});
+      }
+    }
 
   msToTime = (duration) => {
     let seconds = (duration % 60).toLocaleString();
@@ -123,6 +167,28 @@ class CDPlayer extends React.Component{
     }
   }
 
+  next = () => {
+    const {index, audio} = this.state;
+    if(index + 1 < music.length){
+      this.updateAudioComponent(music[index+1]);
+      this.setState({index: index + 1});
+    }else{
+      this.updateAudioComponent(music[0]);
+      this.setState({index: 0});
+    }
+  }
+
+  last = () => {
+    const {index, audio} = this.state;
+    if(index - 1 >= 0){
+      this.updateAudioComponent(music[index-1]);
+      this.setState({index: index - 1});
+    }else{
+      this.updateAudioComponent(music[music.length-1]);
+      this.setState({index: music.length - 1});
+    }
+  }
+
   //控制聲音
   voice = () =>{
     const {audio} = this.state;
@@ -154,22 +220,23 @@ class CDPlayer extends React.Component{
   }
 
   render() {
-    const {playState, cycleState, voice, durationText, currentTimeText, currentTime, duration} = this.state;
+    const {playState, cycleState, voice, durationText, currentTimeText, currentTime, duration, index} = this.state;
     const {musicName, author} = this.props;
     return (
         <div className='main'>
             <div className='player' style={this.getHiddenCDAnimation()}> 
                 <div className='CDBlock'>
                   <div><img className='rightLine' src={rightLine} alt="logo" style={{visibility: playState? 'visible':'hidden'}} /></div>
-                  <div className='CD' style={{animationPlayState: playState? 'running':'paused'}}>
+                  <div className='CD' 
+                    style={{animationPlayState: playState? 'running':'paused', backgroundImage: 'url(' + musicCover[index] + ')'}}>
                       <div className='CDCenter'/>
                   </div>
                   <div><img className='leftLine' src={leftLine} alt="logo" style={{visibility: playState? 'visible':'hidden'}}/></div>
                   <div><img className='leftLine' src={left2Line} alt="logo" style={{visibility: playState? 'visible':'hidden'}}/></div>
                   <div className='buttons'>
                     <div>
-                      <div className='nextButton'/>
-                      <div className='lastButton'/>
+                      <div className='nextButton' onClick={this.next}/>
+                      <div className='lastButton' onClick={this.last}/>
                     </div>
                     <div className='cycleBlock'>
                       <div className='cycleButton' onClick={this.cycle} style={this.getCycleState()} />  
@@ -180,8 +247,8 @@ class CDPlayer extends React.Component{
                 <div className='controlBlock'>
                   <div className='controlVoiceBlock'>
                     <div className='musicInfo'>
-                      <div className='musicName'>{musicName}</div>
-                      <div>{author}</div>
+                      <div className='musicName'>{musicTitle[index]}</div>
+                      <div>{musicAuthor[index]}</div>
                     </div>
                     <div  className='playerComponentBlock'>
                       <div className='playButton' onClick={this.play}>
