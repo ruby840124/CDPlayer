@@ -12,7 +12,13 @@ https://challenge.thef2e.com/user/3115?schedule=3149#works-3149<br><br>
 ## 網頁呈現結果
 **PC結果**<br>
 ▶▶成果<br>
-<img src="https://github.com/ruby840124/CD_player/blob/master/image/PC_0916.JPG" width="50%" height="50%"> <br><br>
+<img src="https://github.com/ruby840124/CD_player/blob/master/image/PC_0918.JPG" width="50%" height="50%"> <br><br>
+▶▶成果<br>
+<img src="https://github.com/ruby840124/CD_player/blob/master/image/PC2_0918.JPG" width="50%" height="50%"> <br><br>
+▶▶成果<br>
+<img src="https://github.com/ruby840124/CD_player/blob/master/image/PC3_0918.JPG" width="50%" height="50%"> <br><br>
+▶▶成果<br>
+<img src="https://github.com/ruby840124/CD_player/blob/master/image/PC4_0918.JPG" width="50%" height="50%"> <br><br>
 ▶▶DEMO網站<br>
 https://ruby840124.github.io/CD_player/<br>
 
