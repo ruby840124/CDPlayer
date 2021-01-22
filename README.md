@@ -1,3 +1,5 @@
+## 作品說明
+實現一個簡單的mp3播放器搭配CSS動畫<br>
 ## Designer設計圖
 ▶▶React切版練習<br>
 <img src="https://github.com/ruby840124/CD_player/blob/master/image/author.JPG" width="10%" height="10%"> <br><br>
@@ -23,5 +25,4 @@ https://challenge.thef2e.com/user/3115?schedule=3149#works-3149<br><br>
 https://ruby840124.github.io/CDPlayer/<br>
 
 ▶▶更新事項<br>
-尚未完成 一堆還沒做 QAQ <br>
-這次練習比較多CSS跟動畫
+尚未完成....<br>
