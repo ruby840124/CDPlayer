@@ -21,8 +21,8 @@ https://challenge.thef2e.com/user/3115?schedule=3149#works-3149<br><br>
 <img src="https://github.com/ruby840124/CD_player/blob/master/image/PC3_0918.JPG" width="50%" height="50%"> <br><br>
 ▶▶成果<br>
 <img src="https://github.com/ruby840124/CD_player/blob/master/image/PC4_0918.JPG" width="50%" height="50%"> <br><br>
-▶▶DEMO網站<br>
+## DEMO網站
 https://ruby840124.github.io/CDPlayer/<br>
-
-▶▶更新事項<br>
+## 更新事項
 尚未完成....<br>
+
